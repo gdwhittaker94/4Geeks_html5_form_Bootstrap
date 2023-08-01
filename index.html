@@ -5,174 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/ec70c3b021.js" crossorigin="anonymous"></script>
     <title>HTML5 Form GDW with Bootstrap</title>
 </head>
 <body>
-    <main class="container border border-2 rounded-2 mt-5 p-0">
+    <main class="container border border-1 border-dark-subtle rounded-2 my-5 p-0">
         <!-- HEADER -->
-        <header class="bg-secondary-subtle px-3 py-2 ">
-            <h2>Payment Form Example</h2>
+        <header class="bg-secondary-subtle px-3 py-3 border-bottom border-dark-subtle">
+            <h2 class="mb-0">Payment Form Example</h2>
         </header>
         <!-- FORM BODY -->
-        <form action="###" class="px-3 py-3">
+        <form action="https://example.com" method="POST">
             <!-- ERROR MESSAGE -->
-            <div class="alert alert-danger d-flex justify-content-between ">
-                <p class="m-0">Some fields are missing!</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="p-3">
+                <div class="alert alert-danger d-flex justify-content-between ">
+                    <p class="m-0">Some fields are missing!</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- ROW -->
+                <section class="d-md-flex">
+                    <fieldset class="d-flex flex-column w-100 me-md-4">
+                        <label for="card" class="mb-2">
+                            Card #
+                        </label>
+                        <input type="number" id="card"  placeholder="XXXX-XXXX-XXXX-XXXX" class="border border-secondary-subtle rounded-2 mb-2">
+                    </fieldset>
+                    <fieldset class="d-flex flex-column w-100 me-md-4">
+                        <label for="cvc" class="mb-2">
+                            CVC #
+                        </label>
+                        <input type="number" id="cvc" placeholder="000" class="border border-secondary-subtle rounded-2 mb-2">
+                    </fieldset>
+                    <fieldset class="d-flex flex-column w-100">
+                        <label for="amount" class="mb-2">
+                            Amount
+                        </label>
+                        <input type="number" id="amount" placeholder="Amount" class="border border-secondary-subtle rounded-2 mb-2">
+                    </fieldset>
+                </section>
+                <!-- 2COLS -->
+                <section class="d-md-flex">
+                    <!-- LCOL -->
+                    <div class="w-100 me-md-4">
+                        <fieldset class="d-flex flex-column mb-md-2">
+                            <label for="fname" class="mb-2">
+                                First Name
+                            </label>
+                            <input type="text" id="fname" class="border border-secondary-subtle rounded-2 mb-2">
+                        </fieldset>
+                        <fieldset class="d-flex flex-column mb-md-2">
+                            <label for="city" class="mb-2">
+                                City
+                            </label>
+                            <input type="text" id="city" class="border border-secondary-subtle rounded-2 mb-2">
+                        </fieldset>
+                        <fieldset class="mb-2">
+                            <label for="card_types" class="mb-2">
+                                We accept:
+                            </label>
+                            <div class="d-flex">
+                                <div class="me-2">
+                                    <input type="radio" id="card_type1" name="card_type" value="Mastercard">
+                                    <label for="card_type1"><i class="fa-brands fa-cc-mastercard fa-xl" style="color: #757575;"></i></label>
+                                </div>
+                                <div class="me-2">
+                                    <input type="radio" id="card_type2" name="card_type" value="VISA">
+                                    <label for="card_type2"><i class="fa-brands fa-cc-visa fa-xl" style="color: #757575;"></i></label>
+                                </div>
+                                <div class="me-2">
+                                    <input type="radio" id="card_type3" name="card_type" value="GDW_Money">
+                                    <label for="card_type3"><i class="fa-brands fa-cc-paypal fa-xl" style="color: #757575;"></i></label>
+                                </div>
+                                <div class="me-2">
+                                    <input type="radio" id="card_type4" name="card_type" value="American Express">
+                                    <label for="card_type4"><i class="fa-brands fa-cc-amex fa-xl" style="color: #757575;"></i></label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- RCOL -->
+                    <div class="w-100">
+                        <fieldset class="d-flex flex-column mb-md-2">
+                            <label for="Last Name" class="mb-2">
+                                Last Name
+                            </label>
+                            <input type="text" id="Last Name" class="border border-secondary-subtle rounded-2 mb-2">
+                        </fieldset>
+                        <fieldset class="d-flex align-items-center mb-md-2">
+                            <div class="d-flex flex-column w-100">
+                                <label for="state" class="mb-2">
+                                    State
+                                </label>
+                                <select name="state" id="state" class="border border-secondary-subtle rounded-2 bg-white h-50 me-3 mb-2">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="d-md-flex flex-md-column w-100">
+                                <label for="postal" class="mb-2">
+                                    Postal Code
+                                </label>
+                                <input type="number" id="postal" class="border border-secondary-subtle rounded-2 mb-2">
+                            </div>
+                        </fieldset>
+                        <fieldset class="d-flex flex-column">
+                            <label for="card_types" class="mb-2">
+                                Message
+                            </label>
+                            <textarea name="message" id="message" cols="30" rows="3" class="border border-secondary-subtle rounded-2 mb-1"></textarea>
+                            <p class="text-secondary" style="font-size: 12px">Add any notes here.</p>
+                        </fieldset>
+                    </div>
+                </section>
             </div>
-            <!-- ROW -->
-            <section class="d-md-flex mb-3">
-                <fieldset class="d-flex flex-column w-100 me-md-4">
-                    <label for="card" class="mb-2">
-                        Card #
-                    </label>
-                    <input type="number" id="card"  placeholder="XXXX-XXXX-XXXX-XXXX" class="border border-secondary-subtle rounded-2">
-                </fieldset>
-                <fieldset class="d-flex flex-column w-100 me-md-4">
-                    <label for="cvc" class="mb-2">
-                        CVC #
-                    </label>
-                    <input type="number" id="cvc" placeholder="000" class="border border-secondary-subtle rounded-2">
-                </fieldset>
-                <fieldset class="d-flex flex-column w-100">
-                    <label for="amount" class="mb-2"> 
-                        Amount
-                    </label>
-                    <input type="number" id="amount" placeholder="Amount" class="border border-secondary-subtle rounded-2">
-                </fieldset>
-            </section>
-            <!-- 2COLS -->
-            <section class="d-md-flex">
-                <!-- LCOL -->
-                <div class="w-100 me-md-4"> 
-                    <fieldset class="d-flex flex-column mb-md-2">
-                        <label for="fname" class="mb-2">
-                            First Name
-                        </label>
-                        <input type="text" id="fname" class="border border-secondary-subtle rounded-2">
-                    </fieldset>
-                    <fieldset class="d-flex flex-column mb-md-2">
-                        <label for="city" class="mb-2">
-                            City
-                        </label>
-                        <input type="text" id="city" class="border border-secondary-subtle rounded-2">
-                    </fieldset>
-                    <fieldset>
-                        <label for="card_types" class="mb-2">
-                            We accept:
-                        </label>
-                        <div>
-                            <div>
-                                <input type="radio" id="card_type1" name="card_type" value="Mastercard">
-                                <label for="card_type1">IMG</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="card_type2" name="card_type" value="VISA">
-                                <label for="card_type2">IMG</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="card_type3" name="card_type" value="GDW_Money">
-                                <label for="card_type3">IMG</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="card_type4" name="card_type" value="American Express">
-                                <label for="card_type4">IMG</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <!-- RCOL -->
-                <div class="w-100">
-                    <fieldset class="d-flex flex-column mb-md-2">
-                        <label for="Last Name" class="mb-2"> 
-                            Last Name
-                        </label>
-                        <input type="text" id="Last Name" class="border border-secondary-subtle rounded-2">
-                    </fieldset>
-                    <fieldset class="d-flex mb-md-2">
-                        <div class="d-md-flex flex-md-column w-100">
-                            <label for="state" class="mb-2">
-                                State
-                            </label>
-                            <select name="state" id="state" class="border border-secondary-subtle rounded-2 bg-white h-50 me-3">
-                                <option value="AL">Alabama</option>
-                                <option value="AK">Alaska</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="CT">Connecticut</option>
-                                <option value="DE">Delaware</option>
-                                <option value="DC">District Of Columbia</option>
-                                <option value="FL">Florida</option>
-                                <option value="GA">Georgia</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="ID">Idaho</option>
-                                <option value="IL">Illinois</option>
-                                <option value="IN">Indiana</option>
-                                <option value="IA">Iowa</option>
-                                <option value="KS">Kansas</option>
-                                <option value="KY">Kentucky</option>
-                                <option value="LA">Louisiana</option>
-                                <option value="ME">Maine</option>
-                                <option value="MD">Maryland</option>
-                                <option value="MA">Massachusetts</option>
-                                <option value="MI">Michigan</option>
-                                <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi</option>
-                                <option value="MO">Missouri</option>
-                                <option value="MT">Montana</option>
-                                <option value="NE">Nebraska</option>
-                                <option value="NV">Nevada</option>
-                                <option value="NH">New Hampshire</option>
-                                <option value="NJ">New Jersey</option>
-                                <option value="NM">New Mexico</option>
-                                <option value="NY">New York</option>
-                                <option value="NC">North Carolina</option>
-                                <option value="ND">North Dakota</option>
-                                <option value="OH">Ohio</option>
-                                <option value="OK">Oklahoma</option>
-                                <option value="OR">Oregon</option>
-                                <option value="PA">Pennsylvania</option>
-                                <option value="RI">Rhode Island</option>
-                                <option value="SC">South Carolina</option>
-                                <option value="SD">South Dakota</option>
-                                <option value="TN">Tennessee</option>
-                                <option value="TX">Texas</option>
-                                <option value="UT">Utah</option>
-                                <option value="VT">Vermont</option>
-                                <option value="VA">Virginia</option>
-                                <option value="WA">Washington</option>
-                                <option value="WV">West Virginia</option>
-                                <option value="WI">Wisconsin</option>
-                                <option value="WY">Wyoming</option>
-                            </select>
-                        </div>
-                        <div class="d-md-flex flex-md-column w-100">
-                            <label for="postal" class="mb-2">
-                                Postal Code
-                            </label>
-                            <input type="number" id="postal" class="border border-secondary-subtle rounded-2">
-                        </div>
-                    </fieldset>
-                    <fieldset class="d-flex flex-column">
-                        <label for="card_types" class="mb-2">
-                            Message
-                        </label>
-                        <textarea name="message" id="message" cols="30" rows="10" class="border border-secondary-subtle rounded-2"></textarea>
-                        <p class="text-secondary" style="font-size: 12px">Add any notes here.</p>
-                    </fieldset>
-                </div>
-            </section>
+            <!-- FOOTER -->
+            <footer class="bg-secondary-subtle px-3 py-2 border-top border-dark-subtle d-flex justify-content-end">
+                <button type="reset" class="me-2 bg-secondary border-0 rounded-1 text-light px-2 py-1" name="reset_button">
+                    Cancel
+                </button>
+                <button type="submit" class="me-2 bg-primary border-0 rounded-1 text-light px-2 py-1" name="reset_button">
+                    Send
+                </button>
+            </footer>
         </form>
-        <!-- FOOTER -->
-        <footer>
-            <button type="reset">
-                Cancel
-            </button>
-            <button type="submit">
-                Send
-            </button>
-        </footer>
+        
     </main>
 </html>
